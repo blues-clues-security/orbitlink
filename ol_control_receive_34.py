@@ -56,7 +56,10 @@ try:
 
             except socket.timeout:
                 # No packet received within the timeout period
+                timestamp = time.time()
+                timestamp_str = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(timestamp))
                 f.write('No data received, Timestamp: {}\n'.format(timestamp_str).encode())
+                f.write('\n')
                 continue
                 
     
