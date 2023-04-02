@@ -1,3 +1,5 @@
+//@note: This is based on an outdated version of ol_control_receive.py
+
 package main
 
 import (

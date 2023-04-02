@@ -7,9 +7,9 @@ HEADER_FORMAT = '!4s4sBBHI'
 
 # Define the packet header fields
 source_address = '192.168.0.47'
-destination_address = '192.168.0.47'
-protocol_id = 17  # UDP protocol ID
-sequence_number = 12346
+destination_address = '192.168.138.234' # TestWinxp: 192.168.138.234
+protocol_id = 10  # UDP protocol ID
+sequence_number = 12345
 timestamp = int(time.time())  # Current Unix timestamp
 payload = b'This is a test payload'
 payload_length = len(payload)
