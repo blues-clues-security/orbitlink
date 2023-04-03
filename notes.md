@@ -8,7 +8,8 @@ Attempt 1: https://archive.org/details/sw-dvd-5-windows-svr-dc-ee-se-web-2008-r-
 Attempt 2: https://archive.org/details/Windows_Server_2008_SP2_x64.iso_reupload
 
 ## Python
-- Python version 3.4
+- Python version 3.4: (https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi)
+  - or: https://www.python.org/downloads/windows/
 
 # OrbitLink Data Vault (Db) Notes
 - Need to install Db on a server (missing .Net framework either 2.0 or 3.5)
