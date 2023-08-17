@@ -19,3 +19,24 @@ Web Front-End Application
 - TT&C Academic Resource: [White Paper](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-7671-0_69)
 - [SpaceTrack API](https://www.space-track.org/documentation#api-formats)
 - [Utah State University White Paper on Satellite Telemetry](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=8846&context=etd) section 2.2 has a table that shows the data used for measuring telemetry and could be used to make TT&C more realistic, section 3.1.3 shows the science packet breakdown, section 3.2.2 shows an overview of the overall TT&C packet
+
+## Sample Workflows
+### Receiving SOSI updates
+```mermaid
+graph TD;
+A(SOSI Site Sender)-->|Forwards incoming data|B(SOSI Main Receiver)
+B-->|Stores in database|B
+```
+### Receiving Imagery updates
+```mermaid
+graph TD;
+A(Imagery Site Sender)-->|Forwards incoming data|B(Imagery Main Receiver)
+B-->|Stores in database|B
+```
+### Sending TTC commands
+```mermaid
+graph TD;
+A(TTC Main Sender)-->|Initiates TTC Commands|B(TTC Site Receiver)
+B-->|Stores log of Commands|B
+D(TTC Site Sender)-->|Sends Command to Target|C(Space)
+```
