@@ -121,3 +121,6 @@ sleep 60
 ### Main Orbit Link
 
 Python Flask app which displays information received in .json data stores
+
+## Deployment
+### ESXI Script
