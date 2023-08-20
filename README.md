@@ -44,7 +44,7 @@ SOSI Site->>SOSI Main: QueueWrite()
 SOSI Main->>SOSI Main: TrackStore()
 ```
 **Imagery**  
-`ImageGen(): Write image byte code to specified host on port 6960` 
+`ImageGen(): Write image byte code to specified host on port 6960`  
 `ImageStore(): Generate image files from byte code and write to specified folder`  
 `ImageQueue(): Read specified folder and write newest XX number of files to image_queue.txt`  
 `ImageTransport(): Read image_queue.txt, copy then delete all entries, send all specified files to specified host on port 8069`  
@@ -69,7 +69,7 @@ Imagery Main->>Imagery Main: ImageStore()
 ```
 **TTC**  
 `CommandGen(): Send random commands to specified host on port 7474`  
-`CommandRecv(): Receive commands and write to queue "commandStore.json"`
+`CommandRecv(): Receive commands and write to queue "commandStore.json"`  
 `CommandSend(): Read newest commands from commandStore.json and send to specified host (an invalid IP) on port 7474 (UDP)`
 
 ```mermaid

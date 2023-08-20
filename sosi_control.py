@@ -1,14 +1,8 @@
-import socket
-import struct
-import time
-import argparse
-import random
-import threading
-import json
+import socket, struct, time, argparse, random, threading, json, os
 from datetime import datetime
-import os
 
-def track_write():
+
+def track_write(src_ip):
     # Sample tracks taken from real world tracks on Rayday 202, 2023
     sample_tracks = [
     "1   116U 61015A   23201.86389281  .00000058  00000-0  10298-3 0  9990",
@@ -249,17 +243,15 @@ def track_write():
         if first_tle.startswith("2"):
             payload.pop(0)
         
-
     # Define packet variables
-    source_address = '127.0.0.1'
-    destination_address = '127.0.0.1'
+    destination_address = src_ip
     protocol_id = random.randint(0,255)  # UDP protocol ID
     sequence_number = random.randint(0,255) # Must fall within Header range
     timestamp = int(time.time())  # Current Unix timestamp
 
     # Create a socket and bind to the source address
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind((source_address, 0))  # Bind to a random free port
+    s.bind((src_ip, 0))  # Bind to a random free port
 
     # Send the packet with the header and payload
     payload = "\n".join(payload)
@@ -268,9 +260,9 @@ def track_write():
 
     # Pack the header fields into a binary string
     HEADER_FORMAT = '!4s4sBBIH'
-    header = struct.pack(HEADER_FORMAT, socket.inet_aton(source_address), socket.inet_aton(destination_address), protocol_id, sequence_number, timestamp, payload_length)
-    s.sendto(header + payload, (destination_address, 7073))  # Use a random destination port
-
+    header = struct.pack(HEADER_FORMAT, socket.inet_aton(src_ip), socket.inet_aton(destination_address), protocol_id, sequence_number, timestamp, payload_length)
+    s.sendto(header + payload, (destination_address, 7073))  
+    
     # Close the socket
     s.close()
 
@@ -284,7 +276,7 @@ def track_store(stop_event):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((host, port)) 
 
-    print(f"Listening for UDP traffic on port {port}...")
+    print("Listening for UDP traffic on port {}...".format(port))
 
     # Continuously listen for incoming UDP traffic
     try:
@@ -295,7 +287,7 @@ def track_store(stop_event):
 
                 # Unpack the header
                 header_data = data[:header_length]
-                src_ip, dest_ip, protocol_id, sequence_number, timestamp, payload_length = struct.unpack(HEADER_FORMAT, header_data)
+                src_ip, dst_ip, protocol_id, sequence_number, timestamp, payload_length = struct.unpack(HEADER_FORMAT, header_data)
 
                 # Extract and decode the payload as UTF-8
                 payload_data = data[header_length:header_length+payload_length]
@@ -303,12 +295,12 @@ def track_store(stop_event):
 
                 # Prepare the data for JSON
                 record = {
-                    'src_ip': socket.inet_ntoa(src_ip),
-                    'dest_ip': socket.inet_ntoa(dest_ip),
-                    'protocol_id': protocol_id,
-                    'sequence_number': sequence_number,
                     # Convert from epoch time
                     'timestamp': datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S'),
+                    'src_ip': socket.inet_ntoa(src_ip),
+                    'dst_ip': socket.inet_ntoa(dst_ip),
+                    'protocol_id': protocol_id,
+                    'sequence_number': sequence_number,
                     'payload': payload_text,
                 }
 
@@ -317,7 +309,7 @@ def track_store(stop_event):
                     json.dump(record, file)
                     file.write('\n')
             except OSError as e:
-                print(f"Error while receiving data: {e}")
+                print("Error while receiving data: {}".format(e))
 
     except KeyboardInterrupt:
         pass
@@ -326,11 +318,7 @@ def track_store(stop_event):
         sock.close()
         print("Listener thread stopped.")
 
-def queue_write():
-    #TODO Placeholder for main, add argparse variables
-    destination_ip = '127.0.0.1'
-    PORT = '7073'
-
+def queue_write(src_ip, dst_ip):
     # Read top 1-5 number of entries in sosi_store.tle
     MAX_ENTRIES = 5
     FILENAME = 'sosi_store.tle'
@@ -345,30 +333,52 @@ def queue_write():
                 else:
                     remaining_entries.append(line)
     except FileNotFoundError:
-        print(f"{FILENAME} not found. Nothing to read.")
+        print("{} not found. Nothing to read.".format(FILENAME))
         return
 
     # Remove those entries from sosi_store.tle file
     with open(FILENAME, 'w') as json_file:
         json_file.writelines(remaining_entries)
 
+    # Prepare to send to main orbitlink
+    dest_port = 7074
+
+    # Define packet variables
+    protocol_id = random.randint(0,255)  # UDP protocol ID
+    sequence_number = random.randint(0,255) # Must fall within Header range
+    timestamp = int(time.time())  # Current Unix timestamp
+
     # Send entries via UDP socket to main on port 8067
     if entries:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        
+
         try:
             for entry in entries:
                 data = json.dumps(entry).encode('utf-8')
-                s.sendto(data, (destination_ip, PORT))
+                payload_length = len(data)
+                # Pack the header fields into a binary string
+                HEADER_FORMAT = '!4s4sBBIH'
+                header = struct.pack(HEADER_FORMAT, socket.inet_aton(src_ip), socket.inet_aton(dst_ip), protocol_id, sequence_number, timestamp, payload_length)
+                s.sendto(header + data, (dst_ip, dest_port))
         finally:
             s.close()
 
-
 if __name__ == '__main__':
-    #TODO Initialize Menu
-    
+    # Initialize Menu
+    # python sosi_control.py -dst 192.168.0.47
+    # Note the arguements are position sensitive
+    parser = argparse.ArgumentParser(description='Send a SOSI data packet with a custom header and payload')
+    parser.add_argument('-dst', '--destination', required=True, type=str, help='the destination IP address')
+
+    try:
+        args = parser.parse_args()
+    except Exception as e:
+        print('Error with {}'.format(e))
+
     # Define the packet header fields
-    source_address = '127.0.0.1'
-    destination_address = '127.0.0.1' # TestWinxp: 192.168.138.234
+    src_ip = socket.gethostbyname(socket.gethostname())
+    dst_ip = args.destination # '192.168.0.47'
     
     # Create an Event object to signal the listener thread to stop
     stop_event = threading.Event()
@@ -377,20 +387,17 @@ if __name__ == '__main__':
     listener_thread = threading.Thread(target=track_store, args=(stop_event,))
     listener_thread.start()
 
-    # Start track writer
-    #TODO Add interval argument and send tracks at a specified interval by re-running track_write() function in a loop
     try:
-        time.sleep(5)
-        track_write()
-        time.sleep(5)
-        queue_write()
+        while True:
+            num_times = random.randint(1, 7)
+            
+            for i in range(num_times):
+                track_write(src_ip)
+                time.sleep(10)
+            queue_write(src_ip, dst_ip)
+            time.sleep(30)
     except KeyboardInterrupt:
-        pass
-    finally:
         # Give the thread some time to finish its work
-        stop_event.set()
-        time.sleep(1)
         print("Terminating the program...")
+        stop_event.set()
         os._exit(1)
-        
-
