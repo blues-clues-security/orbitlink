@@ -17,8 +17,8 @@
         }
 
         iframe {
-            width: 30%;
-            height: 300px;
+            width: 100%;
+            height: 600px;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 10px;
@@ -29,15 +29,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+        }
+        .data {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30%;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <h1>OrbitLink</h1>
     <div class="iframe-container">
-        <iframe src="http://localhost:5000/sosi"></iframe>
-        <iframe src="http://localhost:5000/ttc"></iframe>
-        <iframe src="http://localhost:5000/imagery"></iframe>
+        <div class="data">
+            <h1>SOSI</h1>
+            <iframe src="http://localhost:5000/sosi"></iframe>
+        </div>
+        <div class="data">
+            <h1>TTC</h1>
+            <iframe src="http://localhost:5000/ttc"></iframe>
+        </div>
+        <div class="data">
+            <h1>Imagery</h1>
+            <iframe src="http://localhost:5000/imagery"></iframe>
+        </div>
     </div>
 </body>
 </html>

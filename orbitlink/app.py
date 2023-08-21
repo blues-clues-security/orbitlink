@@ -10,7 +10,8 @@ CORS(app)
 def get_ttc():
     with open("data/ttc.json", "r") as f:
         ttc_data = json.load(f)
-
+        
+    #TODO add last time updated/ file added to index.html
     return jsonify({
         'ttc_data': ttc_data,
         })
@@ -25,7 +26,8 @@ def get_sosi():
                 sosi_data.append(json.loads(line.strip()))
             except json.JSONDecodeError as e:
                 print("Error parsing line: {}".format(e))
-        
+    
+    #TODO add last time updated/ file added to index.html
     return jsonify({
         'sosi_data': sosi_data,
         })
@@ -101,6 +103,7 @@ def get_imagery():
     # Get the most recent file
     recent_image = files[-1]
 
+    #TODO add image title to index.html
     # Serve the most recent image
     return send_from_directory(image_dir, recent_image, as_attachment=False, mimetype='image/jpeg')
 
