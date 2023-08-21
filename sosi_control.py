@@ -367,7 +367,6 @@ def queue_write(src_ip, dst_ip):
 if __name__ == '__main__':
     # Initialize Menu
     # python sosi_control.py -dst 192.168.0.47
-    # Note the arguements are position sensitive
     parser = argparse.ArgumentParser(description='Send a SOSI data packet with a custom header and payload')
     parser.add_argument('-dst', '--destination', required=True, type=str, help='the destination IP address')
 

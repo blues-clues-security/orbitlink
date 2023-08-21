@@ -21,6 +21,8 @@ Web Front-End Application
 - [Utah State University White Paper on Satellite Telemetry](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=8846&context=etd) section 2.2 has a table that shows the data used for measuring telemetry and could be used to make TT&C more realistic, section 3.1.3 shows the science packet breakdown, section 3.2.2 shows an overview of the overall TT&C packet
 
 ## Technical Walkthrough
+### Considerations
+- All python has been written in order to be compatible with version 3.4
 ### Sequence Diagrams
 **SOSI**  
 `TrackWrite(): Write random tracks to specified host (Site Host) on port 7073`  
@@ -29,11 +31,11 @@ Web Front-End Application
 
 ```mermaid
 sequenceDiagram
-box sosiTransport.exe
+box sosi_control.exe
 participant "Space"
 participant SOSI Site
 end
-box orbitlink.exe
+box ORBITLINK
 participant SOSI Main
 end
 
@@ -44,7 +46,7 @@ SOSI Site->>SOSI Main: QueueWrite()
 SOSI Main->>SOSI Main: TrackStore()
 ```
 **Imagery**  
-`ImageGen(): Write image byte code to specified host on port 6960`  
+`ImageGen(): Write image byte code to localhost on port 6960`  
 `ImageStore(): Generate image files from byte code and write to specified folder`  
 `ImageQueue(): Read specified folder and write newest XX number of files to image_queue.txt`  
 `ImageTransport(): Read image_queue.txt, copy then delete all entries, send all specified files to specified host on port 8069`  
@@ -52,11 +54,11 @@ SOSI Main->>SOSI Main: TrackStore()
 
 ```mermaid
 sequenceDiagram
-box imageTransport.exe
+box image_control.exe
 participant "Space"
 participant Imagery Site
 end
-box orbitlink.exe
+box ORBITLINK
 participant Imagery Main
 end
 

@@ -1,50 +1,67 @@
-# import base64
-# images = [1,2,3,4,5]
-# for image in images:
-#     with open("resources/image{}.png".format(image), "rb") as image_file:
-#         image_data = image_file.read()
-
-#     image_as_string = base64.b64encode(image_data).decode()
-
-
-#     with open("resources/txt_image{}.txt".format(image), "w") as binary_image:
-#         binary_image.write(image_as_string)
-
-import socket, struct, datetime, json, os
+import socket, struct, time, os
+from datetime import datetime
 
 host = "0.0.0.0"  # Listen on all available network interfaces
 port = 6960
-HEADER_FORMAT = '!4s4sBBIQ'
-header_length = struct.calcsize(HEADER_FORMAT)
+max_title_length = 128
+header_format = '!4s4sBHHIQ{}s'.format(max_title_length)
+header_length = struct.calcsize(header_format)
 
-# Create a socket object and bind it to the specified host and port
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind((host, port)) 
 
-print("Listening for UDP traffic on port {}...".format(port))
 
-# Continuously listen for incoming UDP traffic
-try:
-    # Receive up to 4096 bytes of data from the client
-    data, addr = sock.recvfrom(4096)
+# Continuously write files received
+while True:
+    # Create a socket object and bind it to the specified host and port
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.bind((host, port)) 
 
-    # Unpack the header
-    header_data = data[:header_length]
-    src_ip, dst_ip, protocol_id, sequence_number, timestamp, payload_length = struct.unpack(HEADER_FORMAT, header_data)
+    received_data = {}
+    max_sequence_number = None
+    image_title = None
 
-    # Extract and decode the payload as UTF-8
-    payload_data = data[header_length:header_length+payload_length]
-    payload_text = payload_data.decode('utf-8')
+    print("Listening for UDP traffic on port {}...".format(port))
+    # Continuously listen for incoming UDP traffic
+    while True:
+        # Receive packet
+        packet, addr = sock.recvfrom(65535)
+        
+        # Unpack header
+        header_size = struct.calcsize(header_format)
+        header = packet[:header_size]
+        src_ip, dest_ip, protocol_id, sequence_number, max_sequence_number, timestamp, payload_length, title = struct.unpack(header_format, header)
+        chunk = packet[header_length:header_length+payload_length]
+        
+        # Store received data
+        received_data[sequence_number] = chunk
 
-    # Write the data to sosi_store.tle
-    with open("resources/recv_image{}.txt".format(sequence_number), "w") as binary_image:
-        binary_image.write(payload_text)
+        if image_title is None:
+            image_title = title.rstrip(b'\0').decode()
+        
+        # Check if all packets received (this is just a simple example, you might want to implement a more robust mechanism)
+        if len(received_data) == max_sequence_number + 1:
+            break
 
-except OSError as e:
-    print("Error while receiving data: {}".format(e))
+    # Reconstruct payload
+    payload = b''.join([received_data[i] for i in range(max_sequence_number+1)])
 
-except KeyboardInterrupt:
-    os._exit(1)
+    directory = 'images'
+    timestamp = datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d_%H_%M_%S')
+    output_file = '{}_{}'.format(timestamp, image_title)
+    full_path = os.path.join(directory, output_file)
 
-finally:
-    print("Closing")
+    # Check if the directory exists, and if not, create it
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    if len([name for name in os.listdir(directory) if name.endswith('.png')]) > 3:
+        # Avoid overloading file system with images
+        print('***QUEUE FULL***')
+        print('***LOST FILE: {}***'.format(output_file))
+        print('***WAITING 30 SECONDS BEFORE LISTENING***')
+        time.sleep(30)
+    else:
+        # Save payload to file
+        with open(full_path, 'wb') as f:
+            f.write(payload)
+        print('***SAVED IMAGE AS {}***'.format(full_path))
+    sock.close()
+    time.sleep(0.05)
