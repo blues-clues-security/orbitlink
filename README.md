@@ -37,10 +37,6 @@ SOSI Data Forwarder (sender), TT&C Command Forwarder (receiver), and Imagery For
 
 - All python (in the control programs) has been written in order to be compatible with version 3.4
 
-### Usage
-- OrbitLink  
-`python.exe app.py -ttc ttc_host_ip`  
-
 ## Technical Walkthrough
 ### Sequence Diagrams
 **SOSI**  

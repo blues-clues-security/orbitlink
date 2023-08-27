@@ -1091,6 +1091,34 @@
             "pps_rtc_weekdays": 6,
             "gps_week_number": 11701,
             "pps_gps_milliseconds": 29848
+        },
+        {
+            "current_time": "2023-08-27 16:08:21",
+            "pps_system_clock_milliseconds": 723,
+            "pps_rtc_seconds": 21,
+            "pps_rtc_hundredths": 72,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 8,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 17757,
+            "pps_gps_milliseconds": 55715
+        },
+        {
+            "current_time": "2023-08-27 16:08:25",
+            "pps_system_clock_milliseconds": 308,
+            "pps_rtc_seconds": 25,
+            "pps_rtc_hundredths": 30,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 8,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 8717,
+            "pps_gps_milliseconds": 50241
         }
     ],
     "mode_data": [
