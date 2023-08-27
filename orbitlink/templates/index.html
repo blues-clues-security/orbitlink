@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrbitLink</title>
     <style>
         body {
             background-color: #2C2C2C;
             color: #FFF;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background: url('static/logo.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.9;
         }
 
         h1 {
-            color: #FF3333;
+            color: #ff0707;
             text-align: center;
             margin-top: 50px;
             margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        h4 {
+            margin-bottom: 20px;
         }
 
         iframe {
@@ -21,39 +31,48 @@
             height: 600px;
             border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
+            margin-bottom: 20px;
             border-radius: 4px;
+            transition: box-shadow 0.3s;
+        }
+
+        iframe:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .iframe-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
             width: 100%;
+            padding: 0 2%;
         }
+
         .data {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             width: 30%;
-            margin: 10px;
         }
+
     </style>
 </head>
 <body>
-    <h1>OrbitLink</h1>
     <div class="iframe-container">
         <div class="data">
             <h1>SOSI</h1>
+            <h4>Last Updated: {{ sosi_update }}</h4>
             <iframe src="http://localhost:5000/sosi"></iframe>
         </div>
         <div class="data">
             <h1>TTC</h1>
+            <h4>Last Updated: {{ ttc_update }}</h4>
             <iframe src="http://localhost:5000/ttc"></iframe>
         </div>
         <div class="data">
             <h1>Imagery</h1>
+            <h4>Last Updated: {{ imagery_update }}</h4>
             <iframe src="http://localhost:5000/imagery"></iframe>
         </div>
     </div>

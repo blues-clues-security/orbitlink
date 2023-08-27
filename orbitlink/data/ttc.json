@@ -1,5 +1,1448 @@
 {
-    "PLACEHOLDER": {
-        "DATA": "COMING SOON!"
-    }
+    "time_data": [
+        {
+            "current_time": "2023-08-27 12:18:20",
+            "pps_system_clock_milliseconds": 29,
+            "pps_rtc_seconds": 20,
+            "pps_rtc_hundredths": 2,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 18,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 32670,
+            "pps_gps_milliseconds": 8548
+        },
+        {
+            "current_time": "2023-08-27 12:18:23",
+            "pps_system_clock_milliseconds": 603,
+            "pps_rtc_seconds": 23,
+            "pps_rtc_hundredths": 60,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 18,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 2478,
+            "pps_gps_milliseconds": 34712
+        },
+        {
+            "current_time": "2023-08-27 12:19:49",
+            "pps_system_clock_milliseconds": 731,
+            "pps_rtc_seconds": 49,
+            "pps_rtc_hundredths": 73,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 19,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 45245,
+            "pps_gps_milliseconds": 57500
+        },
+        {
+            "current_time": "2023-08-27 12:19:53",
+            "pps_system_clock_milliseconds": 307,
+            "pps_rtc_seconds": 53,
+            "pps_rtc_hundredths": 30,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 19,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 46040,
+            "pps_gps_milliseconds": 44503
+        },
+        {
+            "current_time": "2023-08-27 12:20:52",
+            "pps_system_clock_milliseconds": 683,
+            "pps_rtc_seconds": 52,
+            "pps_rtc_hundredths": 68,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 20,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 10435,
+            "pps_gps_milliseconds": 65230
+        },
+        {
+            "current_time": "2023-08-27 12:20:56",
+            "pps_system_clock_milliseconds": 241,
+            "pps_rtc_seconds": 56,
+            "pps_rtc_hundredths": 24,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 20,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 39669,
+            "pps_gps_milliseconds": 53414
+        },
+        {
+            "current_time": "2023-08-27 12:22:52",
+            "pps_system_clock_milliseconds": 686,
+            "pps_rtc_seconds": 52,
+            "pps_rtc_hundredths": 68,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 22,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 38617,
+            "pps_gps_milliseconds": 615
+        },
+        {
+            "current_time": "2023-08-27 12:22:56",
+            "pps_system_clock_milliseconds": 243,
+            "pps_rtc_seconds": 56,
+            "pps_rtc_hundredths": 24,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 22,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 45162,
+            "pps_gps_milliseconds": 9691
+        },
+        {
+            "current_time": "2023-08-27 12:24:52",
+            "pps_system_clock_milliseconds": 688,
+            "pps_rtc_seconds": 52,
+            "pps_rtc_hundredths": 68,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 24,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 48961,
+            "pps_gps_milliseconds": 56046
+        },
+        {
+            "current_time": "2023-08-27 12:24:56",
+            "pps_system_clock_milliseconds": 246,
+            "pps_rtc_seconds": 56,
+            "pps_rtc_hundredths": 24,
+            "pps_rtc_hours": 12,
+            "pps_rtc_minutes": 24,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 10121,
+            "pps_gps_milliseconds": 39951
+        },
+        {
+            "current_time": "2023-08-27 13:13:06",
+            "pps_system_clock_milliseconds": 268,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 26,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 13,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 30843,
+            "pps_gps_milliseconds": 64219
+        },
+        {
+            "current_time": "2023-08-27 13:13:09",
+            "pps_system_clock_milliseconds": 883,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 88,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 13,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 59311,
+            "pps_gps_milliseconds": 56930
+        },
+        {
+            "current_time": "2023-08-27 13:15:06",
+            "pps_system_clock_milliseconds": 270,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 27,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 15,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 13367,
+            "pps_gps_milliseconds": 32741
+        },
+        {
+            "current_time": "2023-08-27 13:15:09",
+            "pps_system_clock_milliseconds": 891,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 89,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 15,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 20415,
+            "pps_gps_milliseconds": 38471
+        },
+        {
+            "current_time": "2023-08-27 13:17:06",
+            "pps_system_clock_milliseconds": 278,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 27,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 17,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 22735,
+            "pps_gps_milliseconds": 54754
+        },
+        {
+            "current_time": "2023-08-27 13:17:09",
+            "pps_system_clock_milliseconds": 900,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 90,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 17,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 52497,
+            "pps_gps_milliseconds": 13766
+        },
+        {
+            "current_time": "2023-08-27 13:19:06",
+            "pps_system_clock_milliseconds": 286,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 28,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 19,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 83,
+            "pps_gps_milliseconds": 39692
+        },
+        {
+            "current_time": "2023-08-27 13:19:09",
+            "pps_system_clock_milliseconds": 908,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 90,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 19,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 2740,
+            "pps_gps_milliseconds": 57848
+        },
+        {
+            "current_time": "2023-08-27 13:21:06",
+            "pps_system_clock_milliseconds": 290,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 29,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 21,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 30088,
+            "pps_gps_milliseconds": 54685
+        },
+        {
+            "current_time": "2023-08-27 13:21:09",
+            "pps_system_clock_milliseconds": 916,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 91,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 21,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 43795,
+            "pps_gps_milliseconds": 6904
+        },
+        {
+            "current_time": "2023-08-27 13:23:06",
+            "pps_system_clock_milliseconds": 299,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 29,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 23,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 36406,
+            "pps_gps_milliseconds": 10012
+        },
+        {
+            "current_time": "2023-08-27 13:23:09",
+            "pps_system_clock_milliseconds": 925,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 92,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 23,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 20720,
+            "pps_gps_milliseconds": 25118
+        },
+        {
+            "current_time": "2023-08-27 13:25:06",
+            "pps_system_clock_milliseconds": 307,
+            "pps_rtc_seconds": 6,
+            "pps_rtc_hundredths": 30,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 25,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 35678,
+            "pps_gps_milliseconds": 15095
+        },
+        {
+            "current_time": "2023-08-27 13:25:09",
+            "pps_system_clock_milliseconds": 933,
+            "pps_rtc_seconds": 9,
+            "pps_rtc_hundredths": 93,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 25,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 27358,
+            "pps_gps_milliseconds": 40296
+        },
+        {
+            "current_time": "2023-08-27 13:54:55",
+            "pps_system_clock_milliseconds": 756,
+            "pps_rtc_seconds": 55,
+            "pps_rtc_hundredths": 75,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 54,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 35285,
+            "pps_gps_milliseconds": 2836
+        },
+        {
+            "current_time": "2023-08-27 13:54:59",
+            "pps_system_clock_milliseconds": 371,
+            "pps_rtc_seconds": 59,
+            "pps_rtc_hundredths": 37,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 54,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 31598,
+            "pps_gps_milliseconds": 28846
+        },
+        {
+            "current_time": "2023-08-27 13:56:55",
+            "pps_system_clock_milliseconds": 765,
+            "pps_rtc_seconds": 55,
+            "pps_rtc_hundredths": 76,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 56,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 54625,
+            "pps_gps_milliseconds": 5295
+        },
+        {
+            "current_time": "2023-08-27 13:56:59",
+            "pps_system_clock_milliseconds": 379,
+            "pps_rtc_seconds": 59,
+            "pps_rtc_hundredths": 37,
+            "pps_rtc_hours": 13,
+            "pps_rtc_minutes": 56,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 35072,
+            "pps_gps_milliseconds": 56190
+        },
+        {
+            "current_time": "2023-08-27 14:07:13",
+            "pps_system_clock_milliseconds": 150,
+            "pps_rtc_seconds": 13,
+            "pps_rtc_hundredths": 15,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 7,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 61136,
+            "pps_gps_milliseconds": 25284
+        },
+        {
+            "current_time": "2023-08-27 14:07:16",
+            "pps_system_clock_milliseconds": 900,
+            "pps_rtc_seconds": 16,
+            "pps_rtc_hundredths": 90,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 7,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 28741,
+            "pps_gps_milliseconds": 23838
+        },
+        {
+            "current_time": "2023-08-27 14:09:13",
+            "pps_system_clock_milliseconds": 154,
+            "pps_rtc_seconds": 13,
+            "pps_rtc_hundredths": 15,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 9,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 33808,
+            "pps_gps_milliseconds": 34050
+        },
+        {
+            "current_time": "2023-08-27 14:09:16",
+            "pps_system_clock_milliseconds": 908,
+            "pps_rtc_seconds": 16,
+            "pps_rtc_hundredths": 90,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 9,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 17275,
+            "pps_gps_milliseconds": 41748
+        },
+        {
+            "current_time": "2023-08-27 14:11:13",
+            "pps_system_clock_milliseconds": 164,
+            "pps_rtc_seconds": 13,
+            "pps_rtc_hundredths": 16,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 11,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 15199,
+            "pps_gps_milliseconds": 9403
+        },
+        {
+            "current_time": "2023-08-27 14:11:16",
+            "pps_system_clock_milliseconds": 917,
+            "pps_rtc_seconds": 16,
+            "pps_rtc_hundredths": 91,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 11,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 20264,
+            "pps_gps_milliseconds": 40863
+        },
+        {
+            "current_time": "2023-08-27 14:13:13",
+            "pps_system_clock_milliseconds": 173,
+            "pps_rtc_seconds": 13,
+            "pps_rtc_hundredths": 17,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 13,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 19351,
+            "pps_gps_milliseconds": 51750
+        },
+        {
+            "current_time": "2023-08-27 14:13:16",
+            "pps_system_clock_milliseconds": 927,
+            "pps_rtc_seconds": 16,
+            "pps_rtc_hundredths": 92,
+            "pps_rtc_hours": 14,
+            "pps_rtc_minutes": 13,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 9085,
+            "pps_gps_milliseconds": 1701
+        },
+        {
+            "current_time": "2023-08-27 15:04:03",
+            "pps_system_clock_milliseconds": 735,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 73,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 4,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 11881,
+            "pps_gps_milliseconds": 2784
+        },
+        {
+            "current_time": "2023-08-27 15:04:07",
+            "pps_system_clock_milliseconds": 422,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 42,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 4,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 5278,
+            "pps_gps_milliseconds": 54900
+        },
+        {
+            "current_time": "2023-08-27 15:06:03",
+            "pps_system_clock_milliseconds": 743,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 74,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 6,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 33723,
+            "pps_gps_milliseconds": 63790
+        },
+        {
+            "current_time": "2023-08-27 15:06:07",
+            "pps_system_clock_milliseconds": 433,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 43,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 6,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 31372,
+            "pps_gps_milliseconds": 29931
+        },
+        {
+            "current_time": "2023-08-27 15:08:03",
+            "pps_system_clock_milliseconds": 753,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 75,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 8,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 23069,
+            "pps_gps_milliseconds": 32434
+        },
+        {
+            "current_time": "2023-08-27 15:08:07",
+            "pps_system_clock_milliseconds": 443,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 44,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 8,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 20235,
+            "pps_gps_milliseconds": 27461
+        },
+        {
+            "current_time": "2023-08-27 15:10:03",
+            "pps_system_clock_milliseconds": 765,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 76,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 10,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 28593,
+            "pps_gps_milliseconds": 16628
+        },
+        {
+            "current_time": "2023-08-27 15:10:07",
+            "pps_system_clock_milliseconds": 456,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 45,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 10,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 59621,
+            "pps_gps_milliseconds": 28816
+        },
+        {
+            "current_time": "2023-08-27 15:12:03",
+            "pps_system_clock_milliseconds": 774,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 77,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 12,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 6887,
+            "pps_gps_milliseconds": 58293
+        },
+        {
+            "current_time": "2023-08-27 15:12:07",
+            "pps_system_clock_milliseconds": 467,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 46,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 12,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 12858,
+            "pps_gps_milliseconds": 11339
+        },
+        {
+            "current_time": "2023-08-27 15:14:03",
+            "pps_system_clock_milliseconds": 784,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 78,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 14,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 45529,
+            "pps_gps_milliseconds": 12151
+        },
+        {
+            "current_time": "2023-08-27 15:14:07",
+            "pps_system_clock_milliseconds": 477,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 47,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 14,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 62598,
+            "pps_gps_milliseconds": 14698
+        },
+        {
+            "current_time": "2023-08-27 15:16:03",
+            "pps_system_clock_milliseconds": 793,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 79,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 16,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 20673,
+            "pps_gps_milliseconds": 50382
+        },
+        {
+            "current_time": "2023-08-27 15:16:07",
+            "pps_system_clock_milliseconds": 485,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 48,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 16,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 40274,
+            "pps_gps_milliseconds": 38973
+        },
+        {
+            "current_time": "2023-08-27 15:18:03",
+            "pps_system_clock_milliseconds": 803,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 80,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 18,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 4299,
+            "pps_gps_milliseconds": 62145
+        },
+        {
+            "current_time": "2023-08-27 15:18:07",
+            "pps_system_clock_milliseconds": 496,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 49,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 18,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 54889,
+            "pps_gps_milliseconds": 49942
+        },
+        {
+            "current_time": "2023-08-27 15:20:03",
+            "pps_system_clock_milliseconds": 814,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 81,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 20,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 21581,
+            "pps_gps_milliseconds": 36424
+        },
+        {
+            "current_time": "2023-08-27 15:20:07",
+            "pps_system_clock_milliseconds": 506,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 50,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 20,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 19962,
+            "pps_gps_milliseconds": 52533
+        },
+        {
+            "current_time": "2023-08-27 15:22:03",
+            "pps_system_clock_milliseconds": 817,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 81,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 22,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 13488,
+            "pps_gps_milliseconds": 28299
+        },
+        {
+            "current_time": "2023-08-27 15:22:07",
+            "pps_system_clock_milliseconds": 516,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 51,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 22,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 54670,
+            "pps_gps_milliseconds": 34679
+        },
+        {
+            "current_time": "2023-08-27 15:24:03",
+            "pps_system_clock_milliseconds": 828,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 82,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 24,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 46396,
+            "pps_gps_milliseconds": 42834
+        },
+        {
+            "current_time": "2023-08-27 15:24:07",
+            "pps_system_clock_milliseconds": 526,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 52,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 24,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 44357,
+            "pps_gps_milliseconds": 5558
+        },
+        {
+            "current_time": "2023-08-27 15:26:03",
+            "pps_system_clock_milliseconds": 839,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 83,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 26,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 64069,
+            "pps_gps_milliseconds": 40218
+        },
+        {
+            "current_time": "2023-08-27 15:26:07",
+            "pps_system_clock_milliseconds": 536,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 53,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 26,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 36015,
+            "pps_gps_milliseconds": 60369
+        },
+        {
+            "current_time": "2023-08-27 15:28:03",
+            "pps_system_clock_milliseconds": 852,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 85,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 28,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 34990,
+            "pps_gps_milliseconds": 37645
+        },
+        {
+            "current_time": "2023-08-27 15:28:07",
+            "pps_system_clock_milliseconds": 545,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 54,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 28,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 21640,
+            "pps_gps_milliseconds": 55477
+        },
+        {
+            "current_time": "2023-08-27 15:30:03",
+            "pps_system_clock_milliseconds": 856,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 85,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 30,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 33954,
+            "pps_gps_milliseconds": 65348
+        },
+        {
+            "current_time": "2023-08-27 15:30:07",
+            "pps_system_clock_milliseconds": 556,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 55,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 30,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 8675,
+            "pps_gps_milliseconds": 26509
+        },
+        {
+            "current_time": "2023-08-27 15:32:03",
+            "pps_system_clock_milliseconds": 867,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 86,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 32,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 44889,
+            "pps_gps_milliseconds": 45076
+        },
+        {
+            "current_time": "2023-08-27 15:32:07",
+            "pps_system_clock_milliseconds": 570,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 57,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 32,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 17232,
+            "pps_gps_milliseconds": 20582
+        },
+        {
+            "current_time": "2023-08-27 15:34:03",
+            "pps_system_clock_milliseconds": 878,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 87,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 34,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 50776,
+            "pps_gps_milliseconds": 49059
+        },
+        {
+            "current_time": "2023-08-27 15:34:07",
+            "pps_system_clock_milliseconds": 583,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 58,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 34,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 38618,
+            "pps_gps_milliseconds": 33663
+        },
+        {
+            "current_time": "2023-08-27 15:36:03",
+            "pps_system_clock_milliseconds": 887,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 88,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 36,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 4575,
+            "pps_gps_milliseconds": 37429
+        },
+        {
+            "current_time": "2023-08-27 15:36:07",
+            "pps_system_clock_milliseconds": 592,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 59,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 36,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 2348,
+            "pps_gps_milliseconds": 42547
+        },
+        {
+            "current_time": "2023-08-27 15:38:03",
+            "pps_system_clock_milliseconds": 897,
+            "pps_rtc_seconds": 3,
+            "pps_rtc_hundredths": 89,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 38,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 46201,
+            "pps_gps_milliseconds": 27521
+        },
+        {
+            "current_time": "2023-08-27 15:38:07",
+            "pps_system_clock_milliseconds": 606,
+            "pps_rtc_seconds": 7,
+            "pps_rtc_hundredths": 60,
+            "pps_rtc_hours": 15,
+            "pps_rtc_minutes": 38,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 1458,
+            "pps_gps_milliseconds": 34965
+        },
+        {
+            "current_time": "2023-08-27 16:02:21",
+            "pps_system_clock_milliseconds": 689,
+            "pps_rtc_seconds": 21,
+            "pps_rtc_hundredths": 68,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 2,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 61392,
+            "pps_gps_milliseconds": 3672
+        },
+        {
+            "current_time": "2023-08-27 16:02:25",
+            "pps_system_clock_milliseconds": 266,
+            "pps_rtc_seconds": 25,
+            "pps_rtc_hundredths": 26,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 2,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 37865,
+            "pps_gps_milliseconds": 42510
+        },
+        {
+            "current_time": "2023-08-27 16:04:21",
+            "pps_system_clock_milliseconds": 701,
+            "pps_rtc_seconds": 21,
+            "pps_rtc_hundredths": 70,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 4,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 17553,
+            "pps_gps_milliseconds": 65113
+        },
+        {
+            "current_time": "2023-08-27 16:04:25",
+            "pps_system_clock_milliseconds": 278,
+            "pps_rtc_seconds": 25,
+            "pps_rtc_hundredths": 27,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 4,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 38054,
+            "pps_gps_milliseconds": 6445
+        },
+        {
+            "current_time": "2023-08-27 16:06:21",
+            "pps_system_clock_milliseconds": 713,
+            "pps_rtc_seconds": 21,
+            "pps_rtc_hundredths": 71,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 6,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 17548,
+            "pps_gps_milliseconds": 11096
+        },
+        {
+            "current_time": "2023-08-27 16:06:25",
+            "pps_system_clock_milliseconds": 289,
+            "pps_rtc_seconds": 25,
+            "pps_rtc_hundredths": 28,
+            "pps_rtc_hours": 16,
+            "pps_rtc_minutes": 6,
+            "pps_rtc_months": 8,
+            "pps_rtc_date": 27,
+            "pps_rtc_years": 23,
+            "pps_rtc_weekdays": 6,
+            "gps_week_number": 11701,
+            "pps_gps_milliseconds": 29848
+        }
+    ],
+    "mode_data": [
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:18:18"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:18:21"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:19:47"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:19:51"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:20:50"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:20:54"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:22:02"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:23:11"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 12:25:50"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "OFF"
+            },
+            "decoded_time": "2023-08-27 13:13:04"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 13:13:07"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 13:17:52"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 13:18:53"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 13:23:44"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 13:54:53"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 13:54:57"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 14:07:11"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 14:07:14"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 14:12:31"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:04:01"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:04:05"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:10:47"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:13:41"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:13:58"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:16:29"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:16:56"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "OFF"
+            },
+            "decoded_time": "2023-08-27 15:24:06"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:26:50"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:30:04"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "ON",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:31:56"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:33:20"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 15:34:09"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "ON",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 16:02:19"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "OFF",
+                "SLP_SWEEP": "ON",
+                "WAVE": "ON",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 16:02:23"
+        },
+        {
+            "mode_status": {
+                "SLP_EFP_DC": "ON",
+                "SLP_SWEEP": "OFF",
+                "WAVE": "OFF",
+                "SIP_SWEEP": "OFF",
+                "SIP_TRACK": "ON"
+            },
+            "decoded_time": "2023-08-27 16:04:15"
+        }
+    ]
 }
