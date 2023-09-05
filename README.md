@@ -1,6 +1,23 @@
 # OrbitLink
-Suite of applications to simulate a satellite control network
+OrbitLink is designed to provide penetration testers and students an opportunity to apply their skills against a set of (somewhat) realistic applications that simulate the activity on a satellite control network. My experience with these networks is derived from the [resources](#resources) shown below as well as participating in the [Hack-A-Sat](https://hackasat.com/) competitions at DefCon.  
 
+The data used in each of these applications is broken down in [resources](#resources), but more specifically a "correlated time stamp update" and "science mode" packet for TT&C was derived from a [Utah State University White Paper on Satellite Telemetry](https://digitalcommons.usu.edu/cgi/viewcontent.cgi?article=8846&context=etd). The SOSI data is a random sampling taken from [SpaceTrack API](https://www.space-track.org/documentation#api-formats) using RayDay 203, 2023. For the images, the samples provided are mostly hotdog related as it is an inside joke.  
+
+OrbitLink provides a web front end and a suite of applications to simulate transmitting Telemetry Tracking and Control (TT&C) data, receiving images, and receiving Space Object Surveillance and Identification (SOSI) data.  
+
+Below is a visual represntation of the communications flow between the web gateway and each of the controls. For details on each control program see [controls.md](client_controls/controls.md).  
+
+```mermaid
+graph TD
+a(OrbitLink Web Gateway)
+b(imagery_control.py)
+c(sosi_control.py)
+d(ttc_control.py)
+
+a-->d
+b-->a
+c-->a
+```
 ## OrbitLink Web Gateway
 Python Flask web front-end which displays information from the OrbitLink suite
 
@@ -23,6 +40,7 @@ Python Flask web front-end which displays information from the OrbitLink suite
             binary_image.write(image_data)
   ```
 ### Usage
+`python app.py -ttc <ttc_control_ip> --headless`
 - `-ttc` specifies the IP of the destination host running the ttc_control.py application  
 - `--headless` runs just the flask web server without all the listeners/senders
 
@@ -30,92 +48,89 @@ Python Flask web front-end which displays information from the OrbitLink suite
 SOSI Data Forwarder (sender), TT&C Command Forwarder (receiver), and Imagery Forwarder (sender) Applications
 
 ### Usage
-- OrbitLink Controls  
-`sosi.exe sosi_control -dst orbitlink_ip`  
-`imagery.exe imagery_control -dst orbitlink_ip`  
+- OrbitLink Controls:  
+`sosi.exe sosi_control -dst <orbitlink_ip>`  
+`imagery.exe imagery_control -dst <orbitlink_ip>`  
 `ttc.exe ttc_control`  
 
-- All python (in the control programs) has been written in order to be compatible with version 3.4
+- All Python (in the control programs) has been written in order to be compatible with version 3.4
 
-## Technical Walkthrough
-### Sequence Diagrams
-**SOSI**  
-`(CONTROL) TrackWrite(): Write random tracks to localhost on port 7073`  
-
-`(CONTROL) TrackStore(): Write received tracks to queue/database "sosi_store.tle" (.txt masked .tle file)`  
-
-`(CONTROL) QueueWrite(): Leave at least 5 entries in sosi_store.tle and send to the rest to specified host (OrbitLink) on port 8067`  
-
-`(ORBITLINK) TrackStore(): Receives tracks on port 7074 and writes to "data/sosi_store.tle"`
-
+## Red Team
+Below is a diagram which displays all the communications between the different controls, a simulated "space" (which is the control creating a network connection to itself), and the communications with the OrbitLink hub. Using this information, we'll create a list of methods to degrade or manipulate the data in order to render this application suite ineffective. 
 ```mermaid
 sequenceDiagram
-box sosi_control.py
-participant "Space"
-participant SOSI Site
-end
-box ORBITLINK
-participant SOSI Main
-end
 
-"Space"->>SOSI Site: TrackWrite()
-Note right of "Space": traffic to simulate serial connection 
-SOSI Site->>SOSI Site: TrackStore()
-SOSI Site->>SOSI Main: QueueWrite()
-SOSI Main->>SOSI Main: TrackStore()
+    participant Space
+
+    %% Group for SOSI
+    box "SOSI Control"
+        participant SOSI_Control
+    end
+
+    %% Group for Imagery
+    box "Imagery Control"
+        participant Imagery_Control
+    end
+
+    %% Group for TTC
+    box "TTC Control"
+        participant TTC_Control
+    end
+
+    %% Group for ORBITLINK
+    box "ORBITLINK"
+        participant ORBITLINK_SOSI
+        participant ORBITLINK_Imagery
+        participant ORBITLINK_TTC
+    end
+    
+    %% For SOSI
+    Space->>SOSI_Control: TrackWrite() to Port 7073
+    SOSI_Control->>SOSI_Control: TrackStore() to sosi_store.tle
+    SOSI_Control->>ORBITLINK_SOSI: QueueWrite() to Port 8067
+    ORBITLINK_SOSI->>ORBITLINK_SOSI: TrackStore() on Port 7074 to data/sosi_store.tle
+
+    %% For Imagery
+    Space->>Imagery_Control: ImageGen() to Port 6960
+    Imagery_Control->>Imagery_Control: ImageStore()
+    Imagery_Control->>Imagery_Control: ImageQueue()
+    Imagery_Control->>ORBITLINK_Imagery: ImageTransport() to Port 8069
+    ORBITLINK_Imagery->>ORBITLINK_Imagery: ImageStore() on Port 8069
+
+    %% For TTC
+    ORBITLINK_TTC->>TTC_Control: CommandWrite() to Port 7474
+    TTC_Control->>TTC_Control: CommandRecv() on Port 7474
+    TTC_Control->>Space: CommandWrite() to Port 7474 (Invalid host)
 ```
-**Imagery**  
-`(CONTROL) ImageGen(): Write image byte code to localhost on port 6960 to simulate data coming from 'Space'`  
 
-`(CONTROL) ImageStore(): Listen on port 6960 for image byte code and generate between 1-7 image files (randomly) from received byte code then write to specified folder`  
+### Degrade
+#### SOSI
+- Blocking UDP port `7073` on `sosi_control` will no longer allow SOSI data to be received from "space"
+- Blocking UDP port `8067` on `OrbitLink` will no longer allow the master SOSI database to be updated
+- Blocking UDP port `7074` on `OrbitLink` will no longer allow SOSI data to be stored
+- Deny write access to `sosi_store.tle` on `OrbitLink` will no longer allow the web front end to display SOSI data and no new data can be stored
 
-`(CONTROL) ImageQueue(): Read specified folder and write newest between 1-3 (randomly) number of files to image_queue.txt`  
+#### Imagery
+- Blocking UDP port `6960` on `imagery_control` will no longer allow images to be generated from the data received from "space"
+- Deny write access to the `images` folder on `imagery_control` will no longer allow images to be generated from the data received from "space"
+- Blocking TCP port `8069` on `OrbitLink` will no longer allow the master Imagery database to be updated
 
-`(CONTROL) ImageTransport(): Read image_queue.txt, send all entries to specified host on port 8069, then delete specified entries from 'images\image_queue.txt' `  
+#### TTC
+- Blocking UDP port `7474` on `OrbitLink` will no longer allow TTC commands to be queued for transfer
+- Blocking UDP port `7474` on `ttc_control` will no longer allow TTC commands to be sent to "space"
 
-`(ORBITLINK) ImageStore(): Listen on all available network interfaces on port 8069 for image files. If more than 5 image files are in the directory, add the filenames to 'images/recv_imagery.log' and then delete the files`
-
-```mermaid
-sequenceDiagram
-box imagery_control.py
-participant "Space"
-participant Imagery Site
-end
-box ORBITLINK
-participant Imagery Main
-end
-
-"Space"->>Imagery Site: ImageGen()
-Note right of "Space": traffic to simulate serial connection 
-Imagery Site->>Imagery Site: ImageStore()
-Imagery Site->>Imagery Site: ImageQueue()
-Imagery Site->>Imagery Main: ImageTransport()
-Imagery Main->>Imagery Main: ImageStore()
-```
-**TTC**  
-`(ORBITLINK) CommandWrite(): Send 'science mode updates' every 1-5 minutes (randomly) and 'correlated time status updates' every 2 minutes to specified host (-ttc switch) on port 7474`  
-
-`(CONTROL)CommandRecv(): Receive commands on port 7474 and store in 'ttc_command_queue.log'`   
-
-`(CONTROL) CommandWrite(): Send random 'science mode updates' every 1-5 minutes (randomly) and random 'correlated time status updates' every 2 minutes to an invalid host (simulate space) on port 7474`  
-
-    Note: CommandWrite() is not dependent on OrbitLink functioning properly, the 'ttc_command_queue.log' is the only indicator
+### Manipulate
+#### SOSI
+- The SOSI data is transmitted to the `OrbitLink` database via a fairly small packet which contains most of the metadata in the header. As long as a packet crafted can match the size of the header `!4s4sBBIH` the distant end should parse and store the data correctly.
 
 
-```mermaid
-sequenceDiagram
-box ORBITLINK
-participant TTC Main
-end
-box ttc_control.py
-participant TTC Site
-participant "Space"
-end
+#### TTC
+- The TTC commands are transmitted to the `OrbitLink` database with no header. The data is either `>BI` for a science mode packet or `>I BB BB BB BB H I` for a correlated time stamp packet. As long as the data is sent to the correct port with the correct size the `ttc_control` should properly receive the data.
 
-TTC Main->>TTC Site: CommandWrite()
-TTC Site->>TTC Site: CommandRecv()
-TTC Site->>"Space": CommandSend()
-```
+#### Imagery
+- The imagery portion would be difficult to manipulate as the images are generated via a base64 encoded string that is decoded, read, and used to generate the images on `imagery_control`. However the header could be edited and additional images or metadata could be sent in transit. Too many options to list, but not worth the squeeze for manipulation.
+
+
 ## Setup
 ### OrbitLink
 Python Flask app which displays information received in .json data stores
@@ -239,10 +254,9 @@ python.exe app.py -ttc ttc_host
 cd C:\APP
 APP.exe APP_control
 ```
-## Red Team
-- Below is a suggested methodology for breaking the functionalities of this application suite (other than the less than obvious killing processes)
 
 ## Resources
+
 ### SOSI
 - Included some sample data taken from [Space-Track.org](space-track.org/#recent) which shows every element (ELSET) published on the indicated Julian date, prepended by the year.  
 - Also included is a list of LEO, GEO, MEO, and HEO objects indicated by filename. Note, the specific orbit data is in a "3LE" three line element which indicates the name of the space object, followed by the TLE. This data is for every object in the specified group that has received an update within the past 30 days. (CAO: 20230723)
