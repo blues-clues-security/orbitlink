@@ -133,7 +133,9 @@ sequenceDiagram
 
 ## Setup
 ### OrbitLink
-Python Flask app which displays information received in .json data stores
+The flask web app can be run on any Python 3.8+ client with no dependency installation required using:
+`python app.py -ttc <ttc_ip>`  
+To run the web app before the clients are properly configured use the `--headless` flag
 
 ### SOSI Site
 Manual Setup:
@@ -256,7 +258,6 @@ APP.exe APP_control
 ```
 
 ## Resources
-
 ### SOSI
 - Included some sample data taken from [Space-Track.org](space-track.org/#recent) which shows every element (ELSET) published on the indicated Julian date, prepended by the year.  
 - Also included is a list of LEO, GEO, MEO, and HEO objects indicated by filename. Note, the specific orbit data is in a "3LE" three line element which indicates the name of the space object, followed by the TLE. This data is for every object in the specified group that has received an update within the past 30 days. (CAO: 20230723)
