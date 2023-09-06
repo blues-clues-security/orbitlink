@@ -137,6 +137,10 @@ The flask web app can be run on any Python 3.8+ client with no dependency instal
 `python app.py -ttc <ttc_ip>`  
 To run the web app before the clients are properly configured use the `--headless` flag
 
+If you do run into dependency issues, there is a `requirements.txt` which lists all the required modules for orbitlink web app. Install using the included dependencies with:  
+`cd ./orbitlink/orbitlink`  
+`pip install --no-index --find-links=dependencies -r requirements.txt`
+
 ### SOSI Site
 Manual Setup:
 
