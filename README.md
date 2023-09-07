@@ -140,6 +140,11 @@ To run the web app before the clients are properly configured use the `--headles
 If you do run into dependency issues, there is a `requirements.txt` which lists all the required modules for orbitlink web app. Install using the included dependencies with:  
 `cd ./orbitlink/orbitlink`  
 `pip install --no-index --find-links=dependencies -r requirements.txt`
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 89003d9 (Fixing dependencies)
 
 ### SOSI Site
 Manual Setup:
