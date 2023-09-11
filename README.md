@@ -141,6 +141,8 @@ If you do run into dependency issues, there is a `requirements.txt` which lists 
 `cd ./orbitlink/orbitlink`  
 `pip install --no-index --find-links=dependencies -r requirements.txt`
 
+Note: The webpage has been designed for Google Chrome in order to render the iframes properly.
+
 ### SOSI Site
 Manual Setup:
 
