@@ -87,7 +87,7 @@ sequenceDiagram
     %% For SOSI
     Space->>SOSI_Control: TrackWrite() to Port 7073
     SOSI_Control->>SOSI_Control: TrackStore() to sosi_store.tle
-    SOSI_Control->>ORBITLINK_SOSI: QueueWrite() to Port 8067
+    SOSI_Control->>ORBITLINK_SOSI: QueueWrite() to Port 7074
     ORBITLINK_SOSI->>ORBITLINK_SOSI: TrackStore() on Port 7074 to data/sosi_store.tle
 
     %% For Imagery
